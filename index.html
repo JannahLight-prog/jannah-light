@@ -3,124 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jannah Light - الصناعة الذكية</title>
+    <title>Jannah Light - المنصة الرسمية</title>
     <style>
-        :root { --gold: #d4af37; --dark: #121212; --gray: #2c2c2c; --white: #f4f4f4; }
-        body { background: var(--dark); color: var(--white); font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; line-height: 1.6; }
-        .nav-bar { background: rgba(0,0,0,0.9); padding: 15px; position: sticky; top: 0; display: flex; justify-content: center; gap: 15px; border-bottom: 2px solid var(--gold); z-index: 1000; }
-        .btn-lang { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 5px 15px; border-radius: 4px; cursor: pointer; }
-        .btn-lang:hover { background: var(--gold); color: black; }
-        .hero { text-align: center; padding: 60px 20px; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80'); background-size: cover; border-bottom: 3px solid var(--gold); }
-        .hero h1 { font-size: 3em; color: var(--gold); margin: 0; }
-        .container { max-width: 1100px; margin: auto; padding: 20px; }
-        .section-title { border-right: 5px solid var(--gold); padding-right: 15px; color: var(--gold); margin: 40px 0 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-        .card { background: var(--gray); padding: 25px; border-radius: 10px; border-bottom: 4px solid var(--gold); transition: 0.3s; }
-        .card:hover { transform: translateY(-10px); }
-        .tech-list { list-style: none; padding: 0; }
-        .tech-list li { margin-bottom: 10px; padding-right: 20px; position: relative; }
-        .tech-list li::before { content: "⚡"; position: absolute; right: 0; color: var(--gold); }
-        footer { text-align: center; padding: 40px; background: #000; border-top: 1px solid var(--gold); margin-top: 50px; }
+        :root { --gold: #d4af37; --dark: #121212; --card-bg: #1e1e1e; --white: #ffffff; }
+        body { background: var(--dark); color: var(--white); font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; overflow-x: hidden; }
+        
+        /* نظام اللغات الثابت */
+        .nav-lang { background: #000; padding: 15px; display: flex; justify-content: center; gap: 10px; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 1000; }
+        .nav-lang button { background: transparent; border: 1px solid var(--gold); color: var(--gold); padding: 8px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; min-width: 100px; }
+        .nav-lang button:hover { background: var(--gold); color: black; }
+
+        .container { max-width: 1200px; margin: auto; padding: 20px; text-align: center; }
+        
+        header { padding: 50px 20px; border-bottom: 1px solid var(--gray); }
+        h1 { font-size: 3.5rem; color: var(--gold); margin: 0; letter-spacing: 2px; }
+        .badge { display: inline-block; padding: 5px 15px; border: 1px solid var(--gold); margin-top: 10px; font-style: italic; }
+
+        /* الخريطة الإستراتيجية للمربعات */
+        .grid-layout { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; margin-top: 50px; }
+        .main-card { background: var(--card-bg); border: 1px solid #333; border-radius: 15px; padding: 30px; transition: 0.4s; cursor: pointer; text-decoration: none; color: inherit; display: block; }
+        .main-card:hover { border-color: var(--gold); transform: translateY(-10px); background: #252525; }
+        .main-card i { font-size: 2rem; color: var(--gold); display: block; margin-bottom: 15px; }
+        .main-card h3 { margin: 10px 0; font-size: 1.5rem; color: var(--gold); }
+        .main-card p { font-size: 0.9rem; color: #bbb; height: 50px; }
+
+        footer { margin-top: 60px; padding: 30px; border-top: 1px solid var(--gold); color: #888; }
     </style>
 </head>
 <body>
 
-<div class="nav-bar">
-    <button class="btn-lang" onclick="changeLang('ar')">العربية</button>
-    <button class="btn-lang" onclick="changeLang('fr')">Français</button>
-    <button class="btn-lang" onclick="changeLang('en')">English</button>
+<div class="nav-lang">
+    <button onclick="changeLang('ar')">العربية</button>
+    <button onclick="changeLang('fr')">Français</button>
+    <button onclick="changeLang('en')">English</button>
 </div>
-
-<header class="hero">
-    <h1 id="main-title">JANNAH LIGHT</h1>
-    <p id="hero-sub" style="font-size: 1.5em; font-style: italic;">خبرة 20 عاماً في الهندسة والابتكار الصناعي</p>
-</header>
 
 <div class="container">
-    <section>
-        <h2 class="section-title" id="sec1-t">الابتكار التقني: حماية Zener</h2>
-        <div class="card">
-            <p id="sec1-p">نحن نطور تقنيات فريدة في تصميم مصابيح LED تعتمد على دمج حماية Zener Diode لضمان استقرار التيار وإطالة عمر المصباح في أقسى الظروف الكهربائية.</p>
-        </div>
-    </section>
+    <header>
+        <h1 id="title">JANNAH LIGHT</h1>
+        <div id="subtitle" class="badge">خبرة 20 عاماً في الهندسة والابتكار الصناعي</div>
+    </header>
 
-    <section>
-        <h2 class="section-title" id="sec2-t">المنظومة الصناعية والآلات</h2>
-        <div class="grid">
-            <div class="card">
-                <h3 id="m1-t">خطوط تجميع LED</h3>
-                <ul class="tech-list" id="m1-l">
-                    <li>ماكينات تجميع نصف آلية</li>
-                    <li>أدوات البرشمة والكبس الدقيقة</li>
-                    <li>أنظمة فحص الجودة المدمجة</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3 id="m2-t">ماكينات تعبئة السوائل</h3>
-                <ul class="tech-list" id="m2-l">
-                    <li>خطوط ملء الأمبولات (Ampoule Filling)</li>
-                    <li>ماكينات قطع وتعبئة الأكياس المائية</li>
-                    <li>أنظمة التحكم الآلي PLC</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <div class="grid-layout">
+        <!-- رابط الصور -->
+        <a href="Jannah Light-photo.html" class="main-card">
+            <h3 id="c1-t">معرض الصور</h3>
+            <p id="c1-p">استعراض لابتكارات LED وحماية Zener والآلات الصناعية.</p>
+        </a>
 
-    <section>
-        <h2 class="section-title" id="sec3-t">رؤية "جنة لايت"</h2>
-        <div class="card">
-            <p id="sec3-p">تحويل الجزائر إلى قطب لتصنيع الـ LED عالي الجودة من خلال دمج البحث الأكاديمي مع الخبرة الميدانية في الميكانيكا والإلكترونيات.</p>
-        </div>
-    </section>
+        <!-- رابط الفيديوهات -->
+        <a href="Jannah Light-vidéo.html" class="main-card">
+            <h3 id="c2-t">المحتوى المرئي</h3>
+            <p id="c2-p">فيديوهات تشغيل خطوط الإنتاج وماكينات التعبئة آلياً.</p>
+        </a>
+
+        <!-- رابط PDF -->
+        <a href="Jannah Light-pdf.html" class="main-card">
+            <h3 id="c3-t">الوثائق التقنية</h3>
+            <p id="c3-p">المخططات الإستراتيجية وكتيبات المواصفات الفنية (PDF).</p>
+        </a>
+
+        <!-- رابط البودكاست -->
+        <a href="Jannah Light-podcast.html" class="main-card">
+            <h3 id="c4-t">بودكاست جنة</h3>
+            <p id="c4-p">رؤية المهندس محمد دجيل في تطوير الصناعة الوطنية.</p>
+        </a>
+    </div>
+
+    <footer id="footer">
+        © 2026 مشروع جنة لايت - تصميم وتطوير المهندس محمد دجيل
+    </footer>
 </div>
 
-<footer id="footer-text">
-    &copy; 2026 جنة لايت - محمد دجيل. جميع الحقوق محفوظة.
-</footer>
-
 <script>
-    const content = {
+    const translations = {
         ar: {
             title: "JANNAH LIGHT", sub: "خبرة 20 عاماً في الهندسة والابتكار الصناعي",
-            s1t: "الابتكار التقني: حماية Zener", s1p: "نحن نطور تقنيات فريدة في تصميم مصابيح LED تعتمد على دمج حماية Zener Diode لضمان استقرار التيار وإطالة عمر المصباح في أقسى الظروف الكهربائية.",
-            s2t: "المنظومة الصناعية والآلات", m1t: "خطوط تجميع LED", m1l: "<li>ماكينات تجميع نصف آلية</li><li>أدوات البرشمة والكبس الدقيقة</li><li>أنظمة فحص الجودة المدمجة</li>",
-            m2t: "ماكينات تعبئة السوائل", m2l: "<li>خطوط ملء الأمبولات (Ampoule Filling)</li><li>ماكينات قطع وتعبئة الأكياس المائية</li><li>أنظمة التحكم الآلي PLC</li>",
-            s3t: "رؤية \"جنة لايت\"", s3p: "تحويل الجزائر إلى قطب لتصنيع الـ LED عالي الجودة من خلال دمج البحث الأكاديمي مع الخبرة الميدانية.",
-            foot: "© 2026 جنة لايت - محمد دجيل. جميع الحقوق محفوظة.", dir: "rtl"
+            c1t: "معرض الصور", c1p: "استعراض لابتكارات LED وحماية Zener والآلات الصناعية.",
+            c2t: "المحتوى المرئي", c2p: "فيديوهات تشغيل خطوط الإنتاج وماكينات التعبئة آلياً.",
+            c3t: "الوثائق التقنية", c3p: "المخططات الإستراتيجية وكتيبات المواصفات الفنية (PDF).",
+            c4t: "بودكاست جنة", c4p: "رؤية المهندس محمد دجيل في تطوير الصناعة الوطنية.",
+            foot: "© 2026 مشروع جنة لايت - تصميم وتطوير المهندس محمد دجيل", dir: "rtl"
         },
         fr: {
             title: "JANNAH LIGHT", sub: "20 ans d'expertise en ingénierie industrielle",
-            s1t: "Innovation: Protection Zener", s1p: "Nous développons des technologies uniques intégrant des diodes Zener pour stabiliser le courant et maximiser la durée de vie des LED.",
-            s2t: "Équipements Industriels", m1t: "Lignes d'Assemblage LED", m1l: "<li>Machines semi-automatiques</li><li>Outils de sertissage de précision</li><li>Systèmes de contrôle qualité</li>",
-            m2t: "Remplissage d'Ampoules", m2l: "<li>Lignes de remplissage d'ampoules</li><li>Machines de découpe de sachets</li><li>Automatisme PLC</li>",
-            s3t: "Vision Jannah Light", s3p: "Transformer l'Algérie en un pôle de fabrication LED de haute qualité.",
-            foot: "© 2026 Jannah Light - Mohamed Djail. Tous droits réservés.", dir: "ltr"
+            c1t: "Galerie Photos", c1p: "Innovations LED, protection Zener et machines industrielles.",
+            c2t: "Contenu Vidéo", c2p: "Démonstrations des lignes de production et d'emballage.",
+            c3t: "Documents PDF", c3p: "Plans stratégiques et fiches techniques détaillées.",
+            c4t: "Podcast Jannah", c4p: "La vision de l'ingénieur Mohamed Djail sur l'industrie.",
+            foot: "© 2026 Jannah Light - Développé par Mohamed Djail", dir: "ltr"
         },
         en: {
-            title: "JANNAH LIGHT", sub: "20 Years of Industrial Engineering Excellence",
-            s1t: "Innovation: Zener Protection", s1p: "Implementing unique Zener Diode protection to ensure voltage stability and extend LED longevity in harsh conditions.",
-            s2t: "Industrial Ecosystem", m1t: "LED Assembly Lines", m1l: "<li>Semi-automated assembly</li><li>Precision riveting tools</li><li>Integrated QC systems</li>",
-            m2t: "Liquid Filling Machinery", m2l: "<li>Ampoule filling lines</li><li>Water sachet cutting machines</li><li>PLC automation systems</li>",
-            s3t: "The Vision", s3p: "Building Algeria’s future in high-quality LED manufacturing through engineering innovation.",
-            foot: "© 2026 Jannah Light - Mohamed Djail. All Rights Reserved.", dir: "ltr"
+            title: "JANNAH LIGHT", sub: "20 Years of Experience in Industrial Innovation",
+            c1t: "Photo Gallery", c1p: "LED innovations, Zener protection, and industrial machinery.",
+            c2t: "Video Content", c2p: "Operations of production lines and filling machines.",
+            c3t: "Technical PDF", c3p: "Strategic plans and technical specification sheets.",
+            c4t: "Jannah Podcast", c4p: "Mohamed Djail's vision for national industrial growth.",
+            foot: "© 2026 Jannah Light - Designed by Mohamed Djail", dir: "ltr"
         }
     };
 
     function changeLang(lang) {
-        document.getElementById('main-title').innerText = content[lang].title;
-        document.getElementById('hero-sub').innerText = content[lang].sub;
-        document.getElementById('sec1-t').innerText = content[lang].s1t;
-        document.getElementById('sec1-p').innerText = content[lang].s1p;
-        document.getElementById('sec2-t').innerText = content[lang].s2t;
-        document.getElementById('m1-t').innerText = content[lang].m1t;
-        document.getElementById('m1-l').innerHTML = content[lang].m1l;
-        document.getElementById('m2-t').innerText = content[lang].m2t;
-        document.getElementById('m2-l').innerHTML = content[lang].m2l;
-        document.getElementById('sec3-t').innerText = content[lang].s3t;
-        document.getElementById('sec3-p').innerText = content[lang].s3p;
-        document.getElementById('footer-text').innerHTML = content[lang].foot;
-        document.body.dir = content[lang].dir;
+        const t = translations[lang];
+        document.getElementById('title').innerText = t.title;
+        document.getElementById('subtitle').innerText = t.sub;
+        document.getElementById('c1-t').innerText = t.c1t; document.getElementById('c1-p').innerText = t.c1p;
+        document.getElementById('c2-t').innerText = t.c2t; document.getElementById('c2-p').innerText = t.c2p;
+        document.getElementById('c3-t').innerText = t.c3t; document.getElementById('c3-p').innerText = t.c3p;
+        document.getElementById('c4-t').innerText = t.c4t; document.getElementById('c4-p').innerText = t.c4p;
+        document.getElementById('footer').innerText = t.foot;
+        document.body.dir = t.dir;
     }
 </script>
+
 </body>
 </html>
