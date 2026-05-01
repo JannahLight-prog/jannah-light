@@ -1,83 +1,80 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jannah Light - المهندس محمد دجيل</title>
-    <style>
-        :root { --gold: #d4af37; --dark: #0f0f0f; --card: #1a1a1a; }
-        body { background: var(--dark); color: white; font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; text-align: center; }
-        .nav { background: #000; padding: 20px; border-bottom: 2px solid var(--gold); }
-        .nav button { background: none; border: 1px solid var(--gold); color: var(--gold); padding: 7px 15px; cursor: pointer; margin: 0 5px; border-radius: 5px; }
-        .hero { padding: 60px 20px; }
-        h1 { color: var(--gold); font-size: 2.8em; margin: 0; }
-        .strategy-map { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 40px; max-width: 1100px; margin: auto; }
-        .box { background: var(--card); border: 1px solid #333; padding: 30px; border-radius: 12px; transition: 0.3s; text-decoration: none; color: white; display: block; }
-        .box:hover { border-color: var(--gold); transform: scale(1.05); }
-        .box h3 { color: var(--gold); margin-bottom: 10px; }
-        footer { padding: 30px; border-top: 1px solid #222; color: #666; font-size: 0.9em; }
-    </style>
-</head>
-<body>
-
-<div class="nav">
-    <button onclick="changeLang('ar')">العربية</button>
-    <button onclick="changeLang('fr')">Français</button>
-    <button onclick="changeLang('en')">English</button>
-</div>
-
-<div class="hero">
-    <h1 id="h-title">JANNAH LIGHT</h1>
-    <p id="h-sub">خبرة 20 عاماً في الهندسة والابتكار الصناعي</p>
-</div>
-
-<div class="strategy-map">
-    <!-- ربط بملفات الـ PDF المرفوعة -->
-    <a href="CamScanner.pdf" target="_blank" class="box">
-        <h3 id="b1-t">الوثائق التقنية</h3>
-        <p id="b1-p">عرض ملفات CamScanner والمخططات الهندسية الممسوحة ضوئياً.</p>
-    </a>
-
-    <!-- ربط بالبودكاست الصوتي -->
-    <a href="ElevenLabs_2026-04-29T23_13_40_Mohamed_pre_s50_sb75_se50_b_m2.mp3" target="_blank" class="box">
-        <h3 id="b2-t">البودكاست الصناعي</h3>
-        <p id="b2-p">استمع إلى الرؤية الإستراتيجية لمشروع جنة لايت بصوت المهندس.</p>
-    </a>
-
-    <!-- ربط بصفحة الصور -->
-    <a href="Jannah Light-photo.html" class="box">
-        <h3 id="b3-t">معرض الابتكارات</h3>
-        <p id="b3-p">صور حماية Zener وتطبيقات LED الصناعية المتطورة.</p>
-    </a>
-
-    <!-- ربط بصفحة الفيديو -->
-    <a href="Jannah Light-vidéo.html" class="box">
-        <h3 id="b4-t">خطوط الإنتاج</h3>
-        <p id="b4-p">مشاهدة ماكينات ملء الأمبولات وتجميع المصابيح في العمل.</p>
-    </a>
-</div>
-
-<footer id="foot">
-    © 2026 جميع الحقوق محفوظة للمهندس محمد دجيل - مشروع جنة لايت
-</footer>
-
-<script>
-    const data = {
-        ar: { title: "JANNAH LIGHT", sub: "خبرة 20 عاماً في الهندسة والابتكار الصناعي", b1t: "الوثائق التقنية", b1p: "عرض ملفات CamScanner والمخططات الهندسية الممسوحة ضوئياً.", b2t: "البودكاست الصناعي", b2p: "استمع إلى الرؤية الإستراتيجية لمشروع جنة لايت بصوت المهندس.", b3t: "معرض الابتكارات", b3p: "صور حماية Zener وتطبيقات LED الصناعية المتطورة.", b4t: "خطوط الإنتاج", b4p: "مشاهدة ماكينات ملء الأمبولات وتجميع المصابيح في العمل.", foot: "© 2026 جميع الحقوق محفوظة للمهندس محمد دجيل", dir: "rtl" },
-        fr: { title: "JANNAH LIGHT", sub: "20 ans d'expertise industrielle", b1t: "Documents PDF", b1p: "Consultez les fichiers CamScanner et les schémas techniques.", b2t: "Podcast Industriel", b2p: "Écoutez la vision stratégique de Jannah Light.", b3t: "Galerie Innovation", b3p: "Photos de protection Zener et applications LED.", b4t: "Lignes de Production", b4p: "Vidéos des machines de remplissage et d'assemblage.", foot: "© 2026 Jannah Light - Mohamed Djail", dir: "ltr" },
-        en: { title: "JANNAH LIGHT", sub: "20 Years of Industrial Innovation", b1t: "Technical Docs", b1p: "View CamScanner PDF and engineering blueprints.", b2t: "Industrial Podcast", b2p: "Listen to the strategic vision of Jannah Light project.", b3t: "Innovation Gallery", b3p: "Zener protection and advanced LED applications.", b4t: "Production Lines", b4p: "Videos of filling machines and assembly lines.", foot: "© 2026 Jannah Light - Mohamed Djail", dir: "ltr" }
-    };
-
-    function changeLang(l) {
-        document.getElementById('h-title').innerText = data[l].title;
-        document.getElementById('h-sub').innerText = data[l].sub;
-        document.getElementById('b1-t').innerText = data[l].b1t; document.getElementById('b1-p').innerText = data[l].b1p;
-        document.getElementById('b2-t').innerText = data[l].b2t; document.getElementById('b2-p').innerText = data[l].b2p;
-        document.getElementById('b3-t').innerText = data[l].b3t; document.getElementById('b3-p').innerText = data[l].b3p;
-        document.getElementById('b4-t').innerText = data[l].b4t; document.getElementById('b4-p').innerText = data[l].b4p;
-        document.getElementById('foot').innerText = data[l].foot;
-        document.body.dir = data[l].dir;
-    }
-</script>
-</body>
-</html>
+{
+  "applets": [{
+    "lastAccessTime": "2026-04-28T13:32:28.544635Z",
+    "firstAccessTime": "2026-04-27T11:31:18.355663Z",
+    "source": {
+      "sourceType": "SPANNER",
+      "spanner": {
+        "id": "961fbbea-48e3-420b-a1df-0604da33e8a9"
+      }
+    },
+    "name": "Jannah Light - Innovation et Lumière",
+    "description": "Business presentation and production dashboard for Jannah Light industrial lighting solutions in Algeria."
+  }, {
+    "lastAccessTime": "2026-04-28T12:05:31.854529Z",
+    "firstAccessTime": "2026-04-28T12:05:31.854529Z",
+    "source": {
+      "sourceType": "SPANNER",
+      "spanner": {
+        "id": "a745db25-7eff-4883-8d99-d3282e8f3e86"
+      }
+    },
+    "name": "Untitled",
+    "description": "Generated by Gemini."
+  }, {
+    "lastAccessTime": "2026-04-28T12:04:07.582199Z",
+    "firstAccessTime": "2026-04-28T12:01:02.924740Z",
+    "source": {
+      "sourceType": "SPANNER",
+      "spanner": {
+        "id": "059458c9-1819-41e8-9c54-1b085f7bef25"
+      }
+    },
+    "name": "Janna Lite - Investment Prospectus",
+    "description": "A high-fidelity pitch and financial overview application designed for the Janna Lite Project Funding Committee."
+  }, {
+    "lastAccessTime": "2026-04-27T11:23:39.019946Z",
+    "firstAccessTime": "2026-04-27T06:58:54.935471Z",
+    "source": {
+      "sourceType": "SPANNER",
+      "spanner": {
+        "id": "ce689daf-4907-452d-9c36-47786a1d0ff4"
+      }
+    },
+    "name": "Jannah Light - Innovation et Lumière",
+    "description": "مشروع صناعي رائد لإنتاج وتجميع مصابيح LED بنظام DOB في الجزائر، يجمع بين الخبرة الدولية والإنتاج المحلي لتقديم إضاءة ذكية وعالية الجودة."
+  }, {
+    "lastAccessTime": "2026-04-27T06:54:39.350478Z",
+    "firstAccessTime": "2026-04-27T06:39:38.419521Z",
+    "source": {
+      "sourceType": "SPANNER",
+      "spanner": {
+        "id": "fb2cad99-b41b-4746-b247-481b77eac77a"
+      }
+    },
+    "name": "مشروعي الإبداعي - My Creative App",
+    "description": "تطبيق ويب حديث تم إنشاؤه باستخدام React و Tailwind CSS"
+  }, {
+    "lastAccessTime": "2026-04-27T06:39:06.777355Z",
+    "firstAccessTime": "2026-04-27T06:39:06.777355Z",
+    "source": {
+      "sourceType": "SPANNER",
+      "spanner": {
+        "id": "4cb68d21-a24e-45d4-b0cf-19ae04c1f1cb"
+      }
+    },
+    "name": "Untitled",
+    "description": "Generated by Gemini."
+  }, {
+    "lastAccessTime": "2026-04-27T06:37:40.481154Z",
+    "firstAccessTime": "2026-04-27T05:38:45.802577Z",
+    "source": {
+      "sourceType": "SPANNER",
+      "spanner": {
+        "id": "889c3ff1-0655-4bca-85b3-2f7d64796756"
+      }
+    },
+    "name": "Jannah Light Report",
+    "description": "Executive annual report for Jannah Light smart lighting systems."
+  }]
+}

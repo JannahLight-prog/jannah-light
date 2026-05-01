@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>العرض المرئي | Jannah Light</title>
+    <style>
+        :root { --gold: #d4af37; --dark: #0a0a0a; --blue: #0056b3; }
+        body { background: var(--dark); color: #fff; font-family: 'Segoe UI', sans-serif; text-align: center; padding: 20px; }
+        .container { max-width: 900px; margin: auto; }
+        .video-box { 
+            background: #1a1a1a; border: 2px solid var(--gold); border-radius: 15px; 
+            padding: 10px; margin: 20px 0; box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+        video { width: 100%; border-radius: 10px; }
+        .desc { background: #111; padding: 20px; border-radius: 10px; border-right: 4px solid var(--blue); text-align: right; }
+        .btn { 
+            display: inline-block; margin-top: 20px; padding: 12px 30px; 
+            background: var(--gold); color: #000; text-decoration: none; 
+            border-radius: 5px; font-weight: bold; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="color: var(--gold);">مشروع جنة لايت - العرض التوضيحي</h1>
+        
+        <div class="video-box">
+            <!-- تأكد من وضع ملف الفيديو داخل مجلد videos وتسميته promo.mp4 -->
+            <video controls>
+                <source src="media.pdf/videos/machinework.mp4"
+                متصفحك لا يدعم عرض هذا الفيديو.
+            </video>
+        </div>
+
+        <div class="desc">
+            <h3>تفاصيل العرض:</h3>
+            <p>هذا المقطع يوضح آلية عمل خط الإنتاج المخطط له، بما في ذلك عمل آلات الكبس وتوزيع الغراء.</p>
+        </div>
+
+        <a href="index.html" class="btn">العودة للرئيسية</a>
+    </div>
+</body>
+</html>
