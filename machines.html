@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جَنَّة لايت - قائمة الآلات والعتاد الرسمي</title>
+    <style>
+        :root {
+            --gold-primary: #d4af37;
+            --gold-dark: #aa841b;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-light: #f5f5f5;
+            --text-muted: #b3b3b3;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            border-bottom: 2px solid var(--gold-primary);
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            color: var(--gold-primary);
+            margin: 0 0 10px 0;
+            font-size: 2.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        /* قسم تحميل الكتالوج */
+        .catalog-section {
+            text-align: center;
+            margin-bottom: 40px;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px dashed var(--gold-primary);
+        }
+
+        .btn-gold {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-dark));
+            color: #000;
+            text-decoration: none;
+            padding: 12px 30px;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        /* شبكة الآلات */
+        .machines-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .machine-card {
+            background-color: var(--card-bg);
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .machine-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+        }
+
+        .machine-info {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .machine-info h3 {
+            color: var(--gold-primary);
+            margin: 0 0 15px 0;
+            font-size: 1.4rem;
+            border-bottom: 1px solid #2a2a2a;
+            padding-bottom: 10px;
+        }
+
+        .machine-info p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0 0 20px 0;
+            flex-grow: 1;
+        }
+
+        .machine-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 15px 25px;
+            border-top: 1px solid #2a2a2a;
+        }
+
+        .machine-price {
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .machine-status {
+            background: rgba(76, 175, 80, 0.1);
+            color: #4caf50;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-muted);
+            border-top: 1px solid #2a2a2a;
+            margin-top: 50px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>مشروع جَنَّة لايت (Jannah Light)</h1>
+        <p>الدليل التشغيلي وقائمة العتاد والآلات المعتمدة</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- زر تصفح الكتالوج الرسمي المربوط بالملف الجديد -->
+        <div class="catalog-section">
+            <p style="margin:0 0 15px 0; color: var(--text-light);">يمكنك تحميل أو تصفح الدليل التقني الشامل للعتاد والمواصفات التفصيلية مباشرة:</p>
+            <a href="media.pdf/machines_guide.pdf" class="btn-gold" target="_blank">📄 تصفح الدليل التقني للعتاد (PDF)</a>
+        </div>
+
+        <!-- شبكة الآلات الستة مع الحسابات المالية الرسمية -->
+        <div class="machines-grid">
+
+            <!-- الآلة 1 -->
+            <div class="machine-card">
+                <div class="machine-info">
+                    <h3>1. آلة متعددة الوظائف (Pressing + Assembly + Testing)</h3>
+                    <p>تقوم بالعمليات الأساسية للكبس لتثبيت القاعدة والمسامير، والتجمع الميكانيكي للأجزاء، مع إجراء اختبار أولي لضمان عمل المصباح بكفاءة عالية في خط الإنتاج الأول.</p>
+                </div>
+                <div class="machine-meta">
+                    <span class="machine-price">861,250 دج</span>
+                    <span class="machine-status">معتمد</span>
+                </div>
+            </div>
+
+            <!-- الآلة 2 -->
+            <div class="machine-card">
+                <div class="machine-info">
+                    <h3>2. فرن تغطيس بالقصدير (Solder Pot SB PTC 500-D)</h3>
+                    <p>مخصص للحام القصدير للوحات الإلكترونية الدقيقة (PCB) بدقة عالية وتغطيس أطراف المكونات والأسلاك لضمان توصيل كهربائي مثالي ومقاومة عالية للتآكل.</p>
+                </div>
+                <div class="machine-meta">
+                    <span class="machine-price">54,000 دج</span>
+                    <span class="machine-status">معتمد</span>
+                </div>
+            </div>
+
+            <!-- الآلة 3 -->
+            <div class="machine-card">
+                <div class="machine-info">
+                    <h3>3. آلة توزيع الغراء ونظام (Glue Dispenser Semi-Auto)</h3>
+                    <p>آلة نصف أوتوماتيكية مخصصة لتوزيع المعجون والغراء بدقة عالية على جسم المصباح وتثبيت الغطاء لمنع دخول الهواء أو الرطوبة، بقدرة إنتاجية عالية.</p>
+                </div>
+                <div class="machine-meta">
+                    <span class="machine-price">877,000 دج</span>
+                    <span class="machine-status">معتمد</span>
+                </div>
+            </div>
+
+            <!-- الآلة 4 -->
+            <div class="machine-card">
+                <div class="machine-info">
+                    <h3>4. آلة كبس هوائية (Pneumatic Press Machine)</h3>
+                    <p>تستخدم للضغط وتجميع أجزاء المصباح وتثبيت القاعدة والمكونات المعدنية بدقة وسرعة بفضل نظام العمل بالهواء المضغوط المعتمد في الورشة.</p>
+                </div>
+                <div class="machine-meta">
+                    <span class="machine-price">337,500 دج</span>
+                    <span class="machine-status">معتمد</span>
+                </div>
+            </div>
+
+            <!-- الآلة 5 -->
+            <div class="machine-card">
+                <div class="machine-info">
+                    <h3>5. آلة اختبار ووسم بالليزر (Laser Marking & Testing)</h3>
+                    <p>تستخدم في مرحلة ما بعد التجميع لقياس الجهد والتيار واستهلاك الطاقة وطباعة الشعار، رقم المنتج، ورمز التتبع بدقة لمنع التقليد وضمان الجودة.</p>
+                </div>
+                <div class="machine-meta">
+                    <span class="machine-price">1,215,000 دج</span>
+                    <span class="machine-status">معتمد</span>
+                </div>
+            </div>
+
+            <!-- الآلة 6 -->
+            <div class="machine-card">
+                <div class="machine-info">
+                    <h3>6. آلة تلميع وصنفرة صناعية (Buffer Polisher XLBP 9)</h3>
+                    <p>تتميز بمحرك قوي ونظام متكامل لتجميع الغبار لشفط الفضلات، مخصصة لإزالة الزوائد المعدنية وبقايا القصدير وتشطيب البطاقات الإلكترونية بكفاءة وحماية العمال.</p>
+                </div>
+                <div class="machine-meta">
+                    <span class="machine-price">710,000 دج</span>
+                    <span class="machine-status">معتمد</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 - مشروع جَنَّة لايت لإنتاج مصابيح الـ LED الاحترافية</p>
+    </footer>
+
+</body>
+</html>
