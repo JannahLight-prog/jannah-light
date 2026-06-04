@@ -1,2 +1,6 @@
 # jannah-light
-JANNAH LIGHT : Projet d'éclairage LED innovant avec protection Zener intégrée. Expertise de 20 ans en ingénierie industrielle. 
+Jannah Light Industrial  
+شركة جزائرية رائدة في صناعة مصابيح LED عالية الكفاءة والجودة.  
+نستثمر في العقول الجزائرية والخبرة الصناعية لتقديم حلول إنارة مبتكرة، آمنة، وموثوقة.  
+نلتزم بمعايير ISO 9001 وضمان سنتين، لنمنح عملاءنا ثقة كاملة في منتجاتنا.  
+رؤيتنا: أن يكون نور جنة لايت رمزًا للابتكار الجزائري، يصل من البيوت إلى المدن الكبرى حول العالم.
