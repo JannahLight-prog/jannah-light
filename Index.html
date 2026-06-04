@@ -21,7 +21,6 @@
             text-align: center;
         }
         
-        /* شريط اللغات العلوي الثلاثي */
         .top-bar {
             display: flex;
             justify-content: flex-start; 
@@ -53,7 +52,6 @@
             color: var(--white);
         }
 
-        /* القسم الرئيسي والواجهة */
         .hero {
             padding: 40px 20px;
             margin-bottom: 20px;
@@ -70,7 +68,6 @@
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
         }
 
-        /* قسم شعار الكمية والجودة */
         .brand-statement {
             max-width: 800px;
             margin: 0 auto 30px auto;
@@ -93,7 +90,6 @@
             margin-bottom: 0;
         }
 
-        /* قسم العدادات المتحركة الجديد */
         .counters-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -118,7 +114,6 @@
             color: #aaa;
         }
         
-        /* خريطة الروابط الاستراتيجية */
         .strategy-map {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -144,7 +139,6 @@
         .box h3 { color: var(--gold); margin-top: 0; }
         .box p { font-size: 0.9em; color: #ccc; }
 
-        /* قسم شارات الثقة والشراكات الجديد */
         .trust-section {
             margin: 50px auto 20px auto;
             max-width: 1200px;
@@ -171,7 +165,6 @@
             font-weight: bold;
         }
         
-        /* قسم الإنفوجرافيك */
         .infographic-container {
             margin-top: 40px;
             padding: 20px;
@@ -186,7 +179,6 @@
             margin-top: 15px;
         }
 
-        /* زر نسخ البريد الإلكتروني والتواصل */
         .contact-action {
             margin-top: 30px;
         }
@@ -227,7 +219,6 @@
 </head>
 <body>
 
-    <!-- شريط اللغات العلوي -->
     <div class="top-bar">
         <div class="lang-switcher">
             <span style="font-size: 1.1em;">🌐</span>
@@ -239,20 +230,17 @@
         </div>
     </div>
 
-    <!-- القسم الرئيسي مع الصورة -->
     <div class="hero">
-        <h1>جَنَّة لايت - JANNAH LIGHT</h1>
+        <h1>جَنَّة لايت - JANNAH LIGHT</h1>
         <p>صناعة مصابيح LED بمعايير عالمية على أرض الجزائر</p>
-        <img src="media.pdf/jannah_banner.png" alt="واجهة مشروع جَنَّة لايت الاستثماري" class="hero-banner">
+        <img src="jannah_banner.png" alt="واجهة مشروع جَنَّة لايت الاستثماري" class="hero-banner">
     </div>
 
-    <!-- قسم الشعار الاستراتيجي: الكمية والجودة -->
     <div class="brand-statement">
         <h2>الكمية والجودة الكلية .. معيارنا للريادة الصناعية</h2>
-        <p>في مصنع <strong>جَنَّة لايت</strong>، نلتزم بتحقيق التوازن الاستراتيجي بين <strong>غزارة الإنتاج وتغطية السوق (Quantity)</strong> وبين <strong>أعلى معايير الإتقان والجودة العالمية (Quality)</strong> لتقديم منتج وطني بمواصفات تكنولوجية منافسة وقابلة للتصدير.</p>
+        <p>في مصنع <strong>جَنَّة لايت</strong>، نلتزم بتحقيق التوازن الاستراتيجي بين <strong>غزارة الإنتاج وتغطية السوق (Quantity)</strong> وبين <strong>أعلى معايير الإتقان والجودة العالمية (Quality)</strong> لتقديم منتج وطني بمواصفات تكنولوجية منافسة وقابلة للتصدير.</p>
     </div>
 
-    <!-- قسم العدادات التفاعلية المضافة حديثاً -->
     <div class="counters-container">
         <div class="counter-box">
             <div class="counter-number" data-target="60000">0</div>
@@ -269,38 +257,31 @@
     </div>
 
     <div class="strategy-map">
-        <!-- الرابط الأول: دستور التشغيل -->
- <!-- زر العرض التقديمي للمشروع -->
-<a href="media.pdf/jannah_presentation.pdf" target="_blank" class="box">
-    <h3>العرض التقديمي الشامل (Presentation)</h3>
-    <p>الملخص التنفيذي ومخطط العمل الاستراتيجي لـ جَنَّة لايت</p>
-</a>
+        <a href="jannah_presentation.pdf" target="_blank" class="box">
+            <h3>العرض التقديمي الشامل (Presentation)</h3>
+            <p>الملخص التنفيذي ومخطط العمل الاستراتيجي لـ جَنَّة لايت</p>
+        </a>
 
-        <!-- الرابط الثاني: فيديو الآلات -->
-        <a href="media.pdf/videos/machinework.mp4" target="_blank" class="box">
+        <a href="videos/machinework.mp4" target="_blank" class="box">
             <h3>Machine et Vidéo</h3>
             <p>عرض حي لتشغيل الآلات الصناعية وخطوط الإنتاج</p>
         </a>
 
-        <!-- الرابط الثالث: الوثائق التقنية -->
-        <a href="media.pdf/fiches_techniques.pdf" target="_blank" class="box">
+        <a href="fiches_techniques.pdf" target="_blank" class="box">
             <h3>الوثائق التقنية</h3>
             <p>المخططات الهندسية والمواصفات الفنية للمنتجات</p>
         </a>
 
-        <!-- الرابط الرابع: مقدمة المشروع -->
-        <a href="media.pdf/videos/intro.mp4" target="_blank" class="box">
+        <a href="videos/intro.mp4" target="_blank" class="box">
             <h3>Motion Video</h3>
             <p>العرض البصري التعريفي بهوية المشروع</p>
         </a> 
-        <!-- زر التقرير المالي والدراسة الاقتصادية -->
-<a href="media.pdf/jannah_finance.pdf" target="_blank" class="box">
-    <h3>التقرير المالي والدراسة الاقتصادية</h3>
-    <p>مؤشرات الربحية (31%)، فترة استرداد رأس المال، وهيكل التكاليف</p>
-</a>
+        <a href="jannah_finance.pdf" target="_blank" class="box">
+            <h3>التقرير المالي والدراسة الاقتصادية</h3>
+            <p>مؤشرات الربحية (31%)، فترة استرداد رأس المال، وهيكل التكاليف</p>
+        </a>
     </div>
 
-    <!-- قسم شارات الثقة والمطابقة الجديد -->
     <div class="trust-section">
         <h4>المطابقة والمعايير المستهدفة</h4>
         <div class="badges-grid">
@@ -309,37 +290,33 @@
             <div class="badge-card">شراكة تكنولوجية متقدمة DASHUO</div>
         </div>
     </div>
+    
     <div class="infographic-container">
-    <h3 style="color: var(--gold);">الخارطة الاستراتيجية والبطاقات التقنية</h3>
-    <p>ملخص بَصري لعمليات الإنتاج والمؤشرات المالية</p>
-<div class="infographic-container">
-    <img src="123/map.png" alt="خارطة الطريق">
-<img src="123/cards.png" alt="بطاقات التعليمات">
-</div>
-        
-    <div class="contct-action">
+        <h3 style="color: var(--gold);">الخارطة الاستراتيجية والبطاقات التقنية</h3>
+        <p>ملخص بَصري لعمليات الإنتاج والمؤشرات المالية</p>
+        <img src="map.png" alt="الخارطة الاستراتيجية" style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+        <img src="cards.png" alt="البطاقات التقنية" style="width: 100%; border-radius: 10px;">
+    </div>
+    
+    <div class="contact-action">
         <button class="email-btn" onclick="copyEmail()">
             <span>📋 نسخ البريد الإلكتروني للمشروع</span>
         </button>
     </div>
 
-    <!-- إشعار منبثق عند نسخ الإيميل -->
     <div id="toast" class="toast-notification">تم نسخ البريد الإلكتروني بنجاح!</div>
 
     <footer style="margin-top: 50px; color: #666; font-size: 0.8em;">
-        <p>جميع الحقوق محفوظة © جَنَّة لايت 2026</p>
+        <p>جميع الحقوق محفوظة © جَنَّة لايت 2026</p>
     </footer>
 
-    <!-- برمجة الحركات التفاعلية والنسخ التلقائي -->
     <script>
-        // كود تشغيل العدادات التصاعدية تلقائياً عند فتح الصفحة
         document.addEventListener("DOMContentLoaded", () => {
             const counters = document.querySelectorAll('.counter-number');
             counters.forEach(counter => {
                 const updateCount = () => {
                     const target = +counter.getAttribute('data-target');
                     const count = +counter.innerText;
-                    // تحديد سرعة العداد بناءً على حجم الرقم
                     const speed = target > 1000 ? 150 : 30;
                     const increment = target / speed;
 
@@ -347,7 +324,6 @@
                         counter.innerText = Math.ceil(count + increment);
                         setTimeout(updateCount, 15);
                     } else {
-                        // لإضافة فاصلة الآلاف أو علامة النسبة المئوية بشكل صحيح في النهاية
                         if(target === 70) {
                             counter.innerText = "%" + target;
                         } else {
@@ -359,7 +335,6 @@
             });
         });
 
-        // كود نسخ البريد الإلكتروني بضغطة واحدة
         function copyEmail() {
             const email = "djailmohamed40@gmail.com";
             navigator.clipboard.writeText(email).then(() => {
@@ -371,6 +346,5 @@
             });
         }
     </script>
-
 </body>
 </html>
