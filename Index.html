@@ -57,38 +57,79 @@
             padding: 40px 20px;
             margin-bottom: 20px;
         }
-        .hero h1 { color: var(--gold); font-size: 2.5em; margin-bottom: 10px; }
+
+        .hero-title-section {
+            margin-bottom: 10px;
+            order: 2;
+        }
+
+        .arabic-title {
+            color: var(--gold);
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 15px 0;
+            letter-spacing: 2px;
+        }
+
+        .algerian-flag {
+            font-size: 3em;
+            margin: 20px 0;
+            animation: wave 1s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(10deg); }
+        }
+
+        .english-title {
+            color: var(--gold);
+            font-size: 2.8em;
+            font-weight: bold;
+            margin: 15px 0;
+            letter-spacing: 3px;
+        }
+
+        .company-name {
+            color: var(--gold);
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: 20px 0;
+            letter-spacing: 1px;
+        }
         
         .hero-banner {
             width: 100%;
             max-width: 850px;
             height: auto;
             border-radius: 12px;
-            margin-top: 25px;
+            margin: 0 auto 10px auto;
             border: 1px solid rgba(212, 175, 55, 0.3);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+            order: 1;
         }
 
         .brand-statement {
-            max-width: 800px;
-            margin: 0 auto 30px auto;
-            padding: 25px;
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 30px;
             background: linear-gradient(135deg, #1f1f1f, #252525);
             border-left: 4px solid var(--gold);
             border-right: 4px solid var(--gold);
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            line-height: 1.8;
         }
-        .brand-statement h2 {
-            color: var(--gold);
-            margin-top: 0;
-            font-size: 1.6em;
-        }
+
         .brand-statement p {
-            font-size: 1.1em;
-            line-height: 1.6;
-            color: #e0e0e0;
-            margin-bottom: 0;
+            font-size: 1em;
+            line-height: 1.8;
+            color: #d0d0d0;
+            margin: 12px 0;
+        }
+
+        .brand-statement strong {
+            color: var(--gold);
         }
 
         .counters-container {
@@ -216,6 +257,12 @@
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             z-index: 1000;
         }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     </style>
 </head>
 <body>
@@ -232,14 +279,34 @@
     </div>
 
     <div class="hero">
-        <h1>جَنَّة لايت - JANNAH LIGHT</h1>
-        <p>صناعة مصابيح LED بمعايير عالمية على أرض الجزائر</p>
-        <img src="jannah_banner.png" alt="واجهة مشروع جَنَّة لايت الاستثماري" class="hero-banner">
+        <div class="hero-content">
+            <!-- الصورة أولاً -->
+            <img src="jannah_banner.png" alt="واجهة مشروع جَنَّة لايت الاستثماري" class="hero-banner">
+            
+            <!-- الشعار والعناوين -->
+            <div class="hero-title-section">
+                <div class="arabic-title">جَنَّة لايت</div>
+                <div class="algerian-flag">🇩🇿</div>
+                <div class="english-title">JANNAH LIGHT</div>
+                <div class="company-name">Jannah Light Industrial</div>
+            </div>
+        </div>
     </div>
 
+    <!-- النص الوصفي -->
     <div class="brand-statement">
-        <h2>الكمية والجودة الكلية .. معيارنا للريادة الصناعية</h2>
-        <p>في مصنع <strong>جَنَّة لايت</strong>، نلتزم بتحقيق التوازن الاستراتيجي بين <strong>غزارة الإنتاج وتغطية السوق (Quantity)</strong> وبين <strong>أعلى معايير الإتقان والجودة العالمية (Quality)</strong> لتقديم منتج وطني بمواصفات تكنولوجية منافسة وقابلة للتصدير.</p>
+        <p>
+            شركة جزائرية رائدة في صناعة مصابيح LED عالية الكفاءة والجودة.
+        </p>
+        <p>
+            نستثمر في العقول الجزائرية والخبرة الصناعية لتقديم حلول إنارة مبتكرة، آمنة، وموثوقة.
+        </p>
+        <p>
+            نلتزم بمعايير <strong>ISO 9001</strong> وضمان سنتين، لنمنح عملاءنا ثقة كاملة في منتجاتنا.
+        </p>
+        <p>
+            <strong>رؤيتنا:</strong> أن يكون نور جنة لايت رمزًا للابتكار الجزائري، يصل من البيوت إلى المدن الكبرى حول العالم.
+        </p>
     </div>
 
     <div class="counters-container">
@@ -256,30 +323,21 @@
             <div class="counter-label">% نسبة الإدماج الوطني المستهدفة</div>
         </div>
     </div>
-<div style="text-align: center; margin: 30px 0;">
 
-    <img src="workshop.jpg" alt="Jannah Light Workshop" style="width: 90%; max-width: 500px; border-radius: 10px; border: 2px solid #d4af37;">
-    
-    <div style="margin-top: 20px; padding: 20px; border: 2px solid #d4af37; border-radius: 15px; 
-                display: inline-block; width: 85%; max-width: 450px;
-                box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);">
-        
-        <h2 style="color: #d4af37; margin: 0; font-size: 1.6em;">JANNAH LIGHT 🇩🇿</h2>
-        
-        <p style="color: #fff; margin: 10px 0 0 0; font-size: 1em; text-shadow: 0 0 8px #d4af37;">
-            فخر الصناعة الجزائرية - خطوط الإنتاج والتقنيات العالمية
-        </p>
+    <div style="text-align: center; margin: 30px 0;">
+        <img src="workshop.jpg" alt="Jannah Light Workshop" style="width: 90%; max-width: 500px; border-radius: 10px; border: 2px solid #d4af37;">
     </div>
-</div>
-    <div class="strategy-map">
-        <a href="jannah_presentation.pdf" target="_blank" class="box">
-            <h3>العرض التقديمي الشامل (Presentation)</h3>
-            <p>الملخص التنفيذي ومخطط العمل الاستراتيجي لـ جَنَّة لايت</p>
-        </a>
 
-        <a href="videos/machinework.mp4" target="_blank" class="box">
-            <h3>Machine et Vidéo</h3>
+    <div class="strategy-map">
+        <a href="machines.html" class="box">
+            <h3>دليل الآلات</h3>
             <p>عرض حي لتشغيل الآلات الصناعية وخطوط الإنتاج</p>
+        </a>
+        
+
+        <a href="video.html" class="box">
+            <h3>معرض الفيديو</h3>
+            <p>العرض البصري التعريفي بهوية المشروع</p>
         </a>
 
         <a href="fiches_techniques.pdf" target="_blank" class="box">
@@ -287,13 +345,14 @@
             <p>المخططات الهندسية والمواصفات الفنية للمنتجات</p>
         </a>
 
-        <a href="videos/intro.mp4" target="_blank" class="box">
-            <h3>Motion Video</h3>
-            <p>العرض البصري التعريفي بهوية المشروع</p>
-        </a> 
-        <a href="jannah_finance.pdf" target="_blank" class="box">
+        <a href="finance.html" class="box">
             <h3>التقرير المالي والدراسة الاقتصادية</h3>
             <p>مؤشرات الربحية (31%)، فترة استرداد رأس المال، وهيكل التكاليف</p>
+        </a>
+
+        <a href="jannah_presentation.pdf" target="_blank" class="box">
+            <h3>العرض التقديمي الشامل</h3>
+            <p>الملخص التنفيذي ومخطط العمل الاستراتيجي لـ جَنَّة لايت</p>
         </a>
     </div>
 
