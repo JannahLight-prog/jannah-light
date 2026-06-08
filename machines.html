@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جَنَّة لايت - الدليل التقني والمالي المعتمد</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #0a0a0a; font-family: 'Segoe UI', Tahoma, sans-serif; color: #e0e0e0; line-height: 1.6; }
+        .main-header { background: linear-gradient(135deg, #000000, #1f1f1f); border-bottom: 3px solid #d4af37; text-align: center; padding: 40px 20px; }
+        .main-header h1 { color: #d4af37; font-size: 2.8rem; letter-spacing: 2px; }
+        .main-header h2 { color: #aaa; font-size: 1.5rem; margin: 10px 0; }
+        .main-header p { color: #ccc; max-width: 800px; margin: 20px auto 0; }
+        .container { max-width: 1300px; margin: 0 auto; padding: 30px 20px; }
+        .download-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 40px; }
+        .btn { background: linear-gradient(135deg, #d4af37, #aa841b); color: #000; font-weight: bold; padding: 12px 28px; border-radius: 40px; text-decoration: none; display: inline-block; transition: 0.3s; box-shadow: 0 4px 10px rgba(212,175,55,0.3); }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(212,175,55,0.5); }
+        .btn-outline { background: transparent; border: 2px solid #d4af37; color: #d4af37; }
+        .btn-outline:hover { background: #d4af37; color: #000; }
+        .section-title { font-size: 2rem; color: #d4af37; border-right: 5px solid #d4af37; padding-right: 20px; margin: 50px 0 30px 0; }
+        .machines-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-bottom: 40px; }
+        .machine-card { background: #121212; border: 1px solid #2a2a2a; border-radius: 20px; overflow: hidden; transition: 0.3s; }
+        .machine-card:hover { border-color: #d4af37; transform: translateY(-6px); }
+        .machine-img { width: 100%; height: 200px; background: #1e1e1e; display: flex; align-items: center; justify-content: center; overflow: hidden; border-bottom: 1px solid #2a2a2a; }
+        .machine-img img { width: 100%; height: 100%; object-fit: cover; }
+        .machine-info { padding: 20px; }
+        .machine-info h3 { color: #d4af37; font-size: 1.6rem; margin-bottom: 10px; }
+        .machine-sub { color: #d4af37; font-weight: bold; margin-bottom: 15px; }
+        .machine-desc { color: #ccc; margin-bottom: 20px; text-align: justify; }
+        .specs-table { width: 100%; border-collapse: collapse; margin: 15px 0; background: #0d0d0d; border: 1px solid #2a2a2a; }
+        .specs-table td { padding: 10px; border: 1px solid #2a2a2a; vertical-align: top; }
+        .specs-table td:first-child { color: #d4af37; font-weight: bold; width: 35%; background: #1a1a1a; }
+        .price-tag { display: flex; justify-content: space-between; align-items: center; margin-top: 20px; padding-top: 15px; border-top: 1px solid #2a2a2a; }
+        .price { color: #4caf50; font-size: 1.8rem; font-weight: bold; }
+        .status { background: #2e4a30; padding: 5px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: bold; }
+        .data-table { width: 100%; border-collapse: collapse; background: #121212; margin: 20px 0; }
+        .data-table th, .data-table td { border: 1px solid #2a2a2a; padding: 12px; text-align: right; }
+        .data-table th { background: #1f1f1f; color: #d4af37; }
+        .info-cards { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 50px; }
+        .card { background: #121212; border: 1px solid #2a2a2a; border-radius: 20px; padding: 20px; flex: 1; min-width: 200px; text-align: center; transition: 0.3s; }
+        .card:hover { border-color: #d4af37; }
+        .card h4 { color: #d4af37; margin-bottom: 10px; font-size: 1.2rem; }
+        .card .number { font-size: 2rem; font-weight: bold; color: #4caf50; }
+        .image-section { text-align: center; margin: 40px 0 20px; }
+        .image-section img { max-width: 300px; border-radius: 20px; border: 2px solid #d4af37; box-shadow: 0 0 15px rgba(212,175,55,0.3); }
+        .image-caption { text-align: center; color: #d4af37; font-size: 1rem; margin: 10px 0 20px; font-weight: bold; }
+        footer { background: #000; text-align: center; padding: 30px; margin-top: 50px; border-top: 1px solid #2a2a2a; color: #777; }
+        @media (max-width: 700px) { .machines-grid { grid-template-columns: 1fr; } .price { font-size: 1.4rem; } .image-section img { max-width: 90%; } }
+    </style>
+</head>
+<body>
+
+<div class="main-header">
+    <h1>جَنَّة لايت</h1>
+    <h2>Jannah Light</h2>
+    <p>المرجع التقني والمالي المتكامل – ورشة 200 م² – طاقة 25,000 وحدة/شهر – 8 عمال</p>
+</div>
+
+<div class="container">
+    <div class="download-buttons">
+        <a href="media.pdf/machines_guide.pdf" class="btn" target="_blank">📄 تصفح الكتالوج التقني (PDF)</a>
+        <a href="machines_list_2.docx" class="btn btn-outline" download>📥 تحميل قائمة الآلات (DOCX)</a>
+    </div>
+
+    <!-- كروت معلومات سريعة -->
+    <div class="info-cards">
+        <div class="card"><h4>💰 إجمالي المشروع</h4><div class="number">8,956,392 دج</div><div>أقل من سقف التمويل</div></div>
+        <div class="card"><h4>⚙️ عدد الآلات</h4><div class="number">6</div><div>بما فيها آلة التنظيف</div></div>
+        <div class="card"><h4>📦 مخزون استراتيجي</h4><div class="number">6 أشهر</div><div>مواد خام + تغليف</div></div>
+        <div class="card"><h4>👥 طاقة بشرية</h4><div class="number">8 عمال</div><div>وردية أولى</div></div>
+    </div>
+
+    <!-- ========== صورة افتتاحية ========== -->
+    <div class="image-section">
+        <img src="mchshopall.jpeg" alt="جميع آلات جَنَّة لايت" onerror="this.style.display='none'">
+        <div class="image-caption">🏭 جميع آلات ومعدات خط الإنتاج – جَنَّة لايت</div>
+    </div>
+
+    <!-- ========== الآلات الأساسية ========== -->
+    <h2 class="section-title">⚙️ الآلات الأساسية – خط الإنتاج المتكامل</h2>
+    <div class="machines-grid">
+        <!-- الآلة 1 -->
+        <div class="machine-card"><div class="machine-img"><img src="jlled.jpeg" alt="آلة متعددة الوظائف"></div><div class="machine-info"><h3>1. آلة متعددة الوظائف</h3><div class="machine-sub">Pressing + Assembly + Testing</div><div class="machine-desc">كبس القاعدة والمسامير، التجميع الميكانيكي، الاختبار الأولي.</div><table class="specs-table"><tr><td style="color:#d4af37;font-weight:bold;">الوظائف</th><th>كبس، تجميع، اختبار</th></tr><tr><td style="color:#d4af37;font-weight:bold;">قطع الغيار</th><th>مفاتيح، قوالب، أسطوانات</th></tr></table><div class="price-tag"><span class="price">861,250 دج</span><span class="status">معتمد</span></div></div></div>
+        <div class="machine-card"><div class="machine-img"><img src="agingoven.jpeg" alt="فرن تغطيس بالقصدير"></div><div class="machine-info"><h3>2. فرن تغطيس بالقصدير</h3><div class="machine-sub">Solder Pot SB PTC 500-D</div><div class="machine-desc">لحام PCB، تحكم رقمي 200-450°C.</div><table class="specs-table"><tr><td style="color:#d4af37;font-weight:bold;">المواصفات</th><th>وعاء تيتانيوم، تحكم PID</th></tr><tr><td style="color:#d4af37;font-weight:bold;">السلامة</th><th>توصيل أرضي</th></tr></tr><div class="price-tag"><span class="price">54,000 دج</span><span class="status">معتمد</span></div></div></div>
+        <div class="machine-card"><div class="machine-img"><img src="gluemachine.jpeg" alt="آلة توزيع الغراء"></div><div class="machine-info"><h3>3. آلة توزيع الغراء</h3><div class="machine-sub">Glue Dispenser Semi-Auto</div><div class="machine-desc">توزيع الغراء، تثبيت الغطاء، إنتاج 1400/ساعة.</div><table class="specs-table"><tr><td style="color:#d4af37;font-weight:bold;">الملحقات</th><th>إبر، خراطيش، مضخة</th></tr><tr><td style="color:#d4af37;font-weight:bold;">الصيانة</th><th>تنظيف الفوهات</th></tr></tr><div class="price-tag"><span class="price">877,000 دج</span><span class="status">معتمد</span></div></div></div>
+        <div class="machine-card"><div class="machine-img"><img src="airpress.jpeg" alt="آلة كبس هوائية"></div><div class="machine-info"><h3>4. آلة كبس هوائية</h3><div class="machine-sub">Pneumatic Press Machine</div><div class="machine-desc">ضغط وتجميع القاعدة والمكونات المعدنية.</div><table class="specs-table"><tr><td style="color:#d4af37;font-weight:bold;">المستلزمات</th><th>ضاغط هواء، قوالب E27/E14</th></td></tr><div class="price-tag"><span class="price">337,500 دج</span><span class="status">معتمد</span></div></div></div>
+        <div class="machine-card"><div class="machine-img"><img src="lasermachine.jpeg" alt="آلة اختبار ووسم بالليزر"></div><div class="machine-info"><h3>5. آلة اختبار ووسم بالليزر</h3><div class="machine-sub">Laser Marking & Testing</div><div class="machine-desc">قياس كهربائي، طباعة شعار ورقم منتج.</div><table class="specs-table"><tr><td style="color:#d4af37;font-weight:bold;">الفوائد</th><th>اختبار 6-8 قطع دفعة واحدة</th></tr></tr><div class="price-tag"><span class="price">1,215,000 دج</span><span class="status">معتمد</span></div></div></div>
+        <div class="machine-card"><div class="machine-img"><img src="scrubber.jpeg" alt="آلة تنظيف PCB"></div><div class="machine-info"><h3>6. آلة تنظيف PCB</h3><div class="machine-sub">PCB Brushing Machine</div><div class="machine-desc">إزالة بقايا القصدير والفلكس بعد اللحام، تحضير البطاقات للاختبار.</div><table class="specs-table"><tr><td style="color:#d4af37;font-weight:bold;">المواصفات</th><th>محرك بسيط، فرش دوارة، سعر اقتصادي</th></tr><tr><td style="color:#d4af37;font-weight:bold;">الفائدة</th><th>تنظيف سريع، حماية من القصر الكهربائي</th></tr></tr><div class="price-tag"><span class="price">33,750 دج</span><span class="status">معتمد</span></div></div></div>
+    </div>
+
+    <!-- ========== صورة نظام الهواء المضغوط + جدول المعدات المساندة ========== -->
+    <div class="image-section">
+        <img src="airnetwork.jpeg" alt="شبكة الهواء المضغوط" onerror="this.style.display='none'">
+        <div class="image-caption">🔧 نظام الهواء المضغوط – تغذية جميع الآلات الهوائية</div>
+    </div>
+    <h2 class="section-title">🛠️ المعدات المساندة والملحقات الدقيقة</h2>
+    <table class="data-table">
+        <tr><th>المعدة</th><th>السعر (دج)</th></tr>
+        <tr><td style="background:#1a1a1a;">ضاغط هواء + شبكة</th><td style="background:#1a1a1a;">270,000</th></tr>
+        <tr><td style="background:#1a1a1a;">طاولات صناعية (6)</th><td style="background:#1a1a1a;">324,000</th></tr>
+        <tr><td style="background:#1a1a1a;">كراسي صناعية (8)</th><td style="background:#1a1a1a;">64,000</th></tr>
+        <tr><td style="background:#1a1a1a;">رفوف تخزين</th><td style="background:#1a1a1a;">80,000</th></tr>
+        <tr><td style="background:#1a1a1a;">خزائن كهربائية</th><td style="background:#1a1a1a;">150,000</th></tr>
+        <tr><td style="background:#1a1a1a;">أدوات قياس ومعايرة</th><td style="background:#1a1a1a;">120,000</th></td>
+        <tr><td style="background:#1a1a1a;">طاولة فحص QC</th><td style="background:#1a1a1a;">60,000</th></td>
+        <tr><td style="background:#1a1a1a;">مفكات هوائية وثابتة العزم</th><td style="background:#1a1a1a;">160,000</th></td>
+        <tr><td style="background:#1a1a1a;">ملحقات دقيقة</th><td style="background:#1a1a1a;">119,892</th></tr>
+        <tr style="background:#1a1a1a;"><td><strong>المجموع الفرعي</strong></th><td><strong>1,347,892 دج</strong></th></tr>
+    </table>
+
+    <!-- ========== صورة معدات السلامة الشخصية + جدول السلامة ========== -->
+    <div class="image-section">
+        <img src="safetygear.jpeg" alt="معدات الحماية الشخصية" onerror="this.style.display='none'">
+        <div class="image-caption">🛡️ معدات الوقاية الشخصية – سلامة العمال أولاً</div>
+    </div>
+
+    <!-- ========== صورة الإسعافات الأولية ========== -->
+    <div class="image-section">
+        <img src="firstaid.jpeg" alt="حقيبة إسعافات أولية" onerror="this.style.display='none'">
+        <div class="image-caption">🚑 الإسعافات الأولية والطوارئ – استجابة سريعة</div>
+    </div>
+
+    <h2 class="section-title">🧯 معدات الطوارئ والسلامة واللوجستيك</h2>
+    <table class="data-table">
+        <tr><th>الصنف</th><th>السعر (دج)</th></tr>
+        <tr><td style="background:#1a1a1a;">مولد كهرباء 3 kVA</th><td style="background:#1a1a1a;">50,000</th></tr>
+        <tr><td style="background:#1a1a1a;">طفايات حريق CO₂</th><td style="background:#1a1a1a;">100,000</th></tr>
+        <tr><td style="background:#1a1a1a;">أدوات حماية شخصية</th><td style="background:#1a1a1a;">80,000</th></tr>
+        <tr><td style="background:#1a1a1a;">إضاءة طوارئ + إسعافات</th><td style="background:#1a1a1a;">60,000</th></tr>
+        <tr><td style="background:#1a1a1a;">سجادة ESD</th><td style="background:#1a1a1a;">50,000</th><tr>
+        <tr><td style="background:#1a1a1a;">منطقة انتظار وتنظيم</th><td style="background:#1a1a1a;">30,000</th></tr>
+        <tr style="background:#1a1a1a;"><td><strong>المجموع الفرعي</strong></th><td><strong>370,000 دج</strong></th></tr>
+    </table>
+
+    <!-- باقي الأقسام كما هي -->
+    <h2 class="section-title">📦 مواد التغليف (مخزون تشغيلي)</h2>
+    <table class="data-table"><tr><th>المادة</th><th>السعر (دج)</th></tr>
+        <tr><td style="background:#1a1a1a;">علب كرتونية فردية (150,000 عبوة)</th><td style="background:#1a1a1a;">600,000</th></tr>
+        <tr><td style="background:#1a1a1a;">كرتون شحن + حشوات + سيليكا جيل + ملصقات</th><td style="background:#1a1a1a;">300,000</th></tr>
+        <tr style="background:#1a1a1a;"><td><strong>المجموع الفرعي</strong></th><td><strong>900,000 دج</strong></th></tr>
+    </table>
+
+    <h2 class="section-title">⏱️ تكاليف التشغيل والإنتاج (مرحلة الانطلاق التجريبي)</h2>
+    <table class="data-table"><tr><th>البند</th><th>السعر (دج)</th></tr>
+        <tr><td style="background:#1a1a1a;">إيجار المصنع والورشة (شهران)</th><td style="background:#1a1a1a;">200,000</th></tr>
+        <tr><td style="background:#1a1a1a;">رواتب 8 عمال (شهر ونصف)</th><td style="background:#1a1a1a;">420,000</th></tr>
+        <tr><td style="background:#1a1a1a;">كهرباء صناعية (شهران)</th><td style="background:#1a1a1a;">35,000</th></td>
+        <tr><td style="background:#1a1a1a;">نقل ولوجستيك داخلي</th><td style="background:#1a1a1a;">150,000</th></tr>
+        <tr style="background:#1a1a1a;"><td><strong>المجموع الفرعي</strong></th><td><strong>805,000 دج</strong></th></tr>
+    </table>
+
+    <h2 class="section-title">📄 مصاريف التأسيس والتراخيص القانونية</h2>
+    <table class="data-table"><tr><td style="background:#1a1a1a;">سجل تجاري، توثيق، حماية مدنية، تأمين</th><td style="background:#1a1a1a;">50,000 دج</th></tr></tr>
+
+    <h2 class="section-title">💡 المكونات الإلكترونية (مخزون 6 أشهر)</h2>
+    <table class="data-table"><tr><td style="background:#1a1a1a;">LED، PCB، IC، مقاومات، مكثفات، قواعد، أسلاك، معجون لحام، قصدير، غراء سيليكون</th><td style="background:#1a1a1a;">1,790,000 دج</th></tr></tr>
+
+    <h2 class="section-title">🔧 قطع الغيار الأساسية</h2>
+    <table class="data-table">
+        <tr><th>القطعة</th><th>السعر (دج)</th><tr>
+        <tr><td style="background:#1a1a1a;">آلة متعددة الوظائف (مستشعرات، قوالب)</th><td style="background:#1a1a1a;">50,000</th></tr>
+        <tr><td style="background:#1a1a1a;">ضاغط الهواء (فلاتر، زيوت)</th><td style="background:#1a1a1a;">15,000</th></td>
+        </tr><td style="background:#1a1a1a;">آلة الغراء (إبر، خراطيش)</th><td style="background:#1a1a1a;">50,000</th></tr>
+        <tr><td style="background:#1a1a1a;">فرن القصدير (عناصر تسخين)</th><td style="background:#1a1a1a;">40,000</th></tr>
+        <tr><td style="background:#1a1a1a;">آلة الكبس (رؤوس، حلقات)</th><td style="background:#1a1a1a;">30,000</th></tr>
+        <tr><td style="background:#1a1a1a;">آلة الليزر (عدسات، مصدر ليزر)</th><td style="background:#1a1a1a;">60,000</th></tr>
+        <tr><td style="background:#1a1a1a;">آلة التلميع (أقراص، محامل)</th><td style="background:#1a1a1a;">25,000</th></tr>
+        <tr><td style="background:#1a1a1a;">محطات لحام يدوي</th><td style="background:#1a1a1a;">45,000</th></tr>
+        <tr style="background:#1a1a1a;"><td><strong>المجموع الفرعي</strong></th><td><strong>315,000 دج</strong></th></tr>
+    </table>
+
+    <h2 class="section-title">📊 الخلاصة المالية النهائية</h2>
+    <table class="data-table">
+        <tr><th>البند</th><th>القيمة (دج)</th></tr>
+        <tr><td style="background:#1a1a1a;">1. الآلات الأساسية (6 آلات)</th><td style="background:#1a1a1a;">3,378,500</th></tr>
+        <tr><td style="background:#1a1a1a;">2. قطع الغيار</th><td style="background:#1a1a1a;">315,000</th></tr>
+        <tr><td style="background:#1a1a1a;">3. المكونات والمواد الخام (6 أشهر)</th><td style="background:#1a1a1a;">1,790,000</th></td>
+        <tr><td style="background:#1a1a1a;">4. المعدات المساندة</th><td style="background:#1a1a1a;">1,347,892</th></td>
+        <tr><td style="background:#1a1a1a;">5. السلامة والطوارئ</th><td style="background:#1a1a1a;">370,000</th></tr>
+        <tr><td style="background:#1a1a1a;">6. مواد التغليف</th><td style="background:#1a1a1a;">900,000</th></tr>
+        <tr><td style="background:#1a1a1a;">7. تكاليف التشغيل</th><td style="background:#1a1a1a;">805,000</th></td>
+        <tr><td style="background:#1a1a1a;">8. التأسيس والتراخيص</th><td style="background:#1a1a1a;">50,000</th></tr>
+        <tr style="background:#1a1a1a;"><td><strong>الإجمالي العام</strong></th><td><strong>8,956,392 دج</strong></th></tr>
+        <tr><td style="background:#1a1a1a;">سقف التمويل المصرح به</th><td style="background:#1a1a1a;">10,000,000 دج</th></tr>
+    </table>
+
+    <h2 class="section-title">🚀 ماكينات مستقبلية – مرحلة التوسع</h2>
+    <table class="data-table">
+        <tr><th>الماكينة</th><th>السعر التقديري (دج)</th></tr>
+        <tr><td style="background:#1a1a1a;">ماكينة سنفرة أوتوماتيكية</th><td style="background:#1a1a1a;">405,000 – 810,000</th></td>
+        <tr><td style="background:#1a1a1a;">ماكينة تغليف أوتوماتيكي</th><td style="background:#1a1a1a;">540,000 – 1,620,000</th></tr>
+        <tr><td style="background:#1a1a1a;">ماكينة تلميع صناعي</th><td style="background:#1a1a1a;">600,000 – 810,000</th></td>
+        <tr><td style="background:#1a1a1a;">خط إنتاج أوتوماتيكي إضافي</th><td style="background:#1a1a1a;">1,620,000 – 2,700,000</th></tr>
+    </table>
+
+    <div style="background:#121212; padding:20px; border-radius:20px;">
+        <h3 style="color:#d4af37;">📌 ملخص المكونات التشغيلية (6 أشهر)</h3>
+        <p><strong>المواد الكيميائية:</strong> Isopropanol، فلكس، زيت هيدروليكي، شحم صناعي، هلام سيليكون حراري.</p>
+        <p><strong>أدوات القياس:</strong> Lux Meter، Megohmmeter، Thermometer، Clamp Meter.</p>
+        <p><strong>معدات السلامة الإضافية:</strong> سجادة ESD، سوار معصم، طفاية CO₂، حقيبة إسعافات، شفط أبخرة.</p>
+        <p><strong>استراتيجية الاستيراد:</strong> المورد الرئيسي Zhongshan Dashuo (الصين)، مورد محلي للأغطية البلاستيكية. الاستيراد كل 4-5 أشهر.</p>
+    </div>
+</div>
+
+<footer>
+    <p>جميع الحقوق محفوظة © 2026 - مشروع جَنَّة لايت</p>
+    <p>هذا التقرير معتمد ومطابق للأرقام الحقيقية – جاهز للتقديم للجنة التمويل</p>
+</footer>
+
+</body>
+</html>
