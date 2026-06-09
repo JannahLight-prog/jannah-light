@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JLT Section</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+        background: linear-gradient(180deg, #04040f 0%, #080818 100%);
+        color: #f0f0f0;
+        overflow-x: hidden;
+        font-family: 'Cairo', 'Tajawal', sans-serif;
+    }
+
+    #canvas-bg {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .container {
+        position: relative;
+        z-index: 2;
+        padding: 20px;
+    }
+
+    .jlt-competitive-section * { box-sizing: border-box; }
+    .jlt-competitive-section .section-title {
+        color: #d4af37;
+        font-size: 1.9rem;
+        border-right: 5px solid #d4af37;
+        padding-right: 18px;
+        display: inline-block;
+        margin-bottom: 14px;
+        font-family: 'Tajawal', 'Cairo', sans-serif;
+        font-weight: 700;
+        text-shadow: 0 0 18px rgba(212,175,55,0.15);
+    }
+    .jlt-competitive-section .subtitle {
+        color: #a0a0b0;
+        margin-bottom: 26px;
+        line-height: 1.8;
+        font-size: 1rem;
+    }
+    .jlt-competitive-section .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 22px;
+        margin-bottom: 24px;
+    }
+    .jlt-competitive-section .card {
+        background: rgba(18,18,36,0.75);
+        border: 1px solid rgba(212,175,55,0.16);
+        border-radius: 24px;
+        padding: 22px;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.03);
+    }
+    .jlt-competitive-section .card h3 {
+        color: #d4af37;
+        margin-bottom: 14px;
+        font-size: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-family: 'Tajawal', 'Cairo', sans-serif;
+    }
+    .jlt-competitive-section .card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .jlt-competitive-section .card li {
+        margin-bottom: 12px;
+        padding: 10px 12px;
+        border-right: 2px solid rgba(212,175,55,0.55);
+        background: rgba(255,255,255,0.02);
+        border-radius: 14px;
+        color: #f0f0f0;
+        line-height: 1.75;
+    }
+    .jlt-competitive-section .note {
+        margin-top: 14px;
+        color: #a0a0b0;
+        font-size: 0.86rem;
+        line-height: 1.8;
+    }
+    .jlt-competitive-section .section-box {
+        background: linear-gradient(135deg, rgba(0,0,0,0.50), rgba(10,10,28,0.72));
+        border: 1px solid rgba(212,175,55,0.18);
+        border-radius: 28px;
+        padding: 24px;
+        margin-bottom: 24px;
+    }
+    .jlt-competitive-section .section-box h3 {
+        color: #d4af37;
+        margin-bottom: 16px;
+        font-size: 1.45rem;
+        font-family: 'Tajawal', 'Cairo', sans-serif;
+    }
+    .jlt-competitive-section .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 16px;
+    }
+    .jlt-competitive-section .feature {
+        background: rgba(18,18,36,0.76);
+        border: 1px solid rgba(212,175,55,0.14);
+        border-radius: 18px;
+        padding: 18px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        min-height: 96px;
+    }
+    .jlt-competitive-section .feature i {
+        color: #4caf50;
+        margin-top: 3px;
+        font-size: 1.1rem;
+    }
+    .jlt-competitive-section .feature strong {
+        color: #d4af37;
+    }
+    .jlt-competitive-section .pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 18px;
+    }
+    .jlt-competitive-section .pill {
+        background: rgba(26,26,26,0.92);
+        border: 1px solid rgba(212,175,55,0.18);
+        border-radius: 999px;
+        padding: 10px 16px;
+        color: #f0f0f0;
+        font-size: 0.92rem;
+    }
+    .jlt-competitive-section .pill b { color: #d4af37; }
+    .jlt-competitive-section .cta {
+        background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(170,132,27,0.08));
+        border: 1px solid rgba(212,175,55,0.28);
+        border-radius: 26px;
+        padding: 22px;
+        text-align: center;
+        margin-top: 6px;
+    }
+    .jlt-competitive-section .cta h3 {
+        color: #d4af37;
+        margin-bottom: 10px;
+        font-size: 1.35rem;
+    }
+    .jlt-competitive-section .cta p {
+        color: #f0f0f0;
+        margin: 0;
+        line-height: 1.8;
+    }
+    .jlt-competitive-section .foot {
+        color: #a0a0b0;
+        font-size: 0.84rem;
+        margin-top: 14px;
+        text-align: center;
+        line-height: 1.8;
+    }
+    @media (max-width: 700px) {
+        .jlt-competitive-section .section-title { font-size: 1.45rem; }
+        .jlt-competitive-section .subtitle { font-size: 0.92rem; }
+        .jlt-competitive-section .card, .jlt-competitive-section .section-box, .jlt-competitive-section .cta { padding: 18px; }
+    }
+</style>
+</head>
+<body>
+
+<canvas id="canvas-bg"></canvas>
+
+<div class="container">
+    <div class="jlt-competitive-section" style="background: rgba(10, 10, 28, 0.55); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-radius: 32px; border: 1px solid rgba(212,175,55,0.18); padding: 28px 22px; margin-bottom: 30px; box-shadow: 0 8px 40px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.04); color: #f0f0f0; direction: rtl;">
+        
+        <div class="section-title">🏆 لماذا JLT يتفوق على السوق الجزائري؟</div>
+        <div class="subtitle">نسخة مطابقة لهوية الموقع الرسمية: نفس الخلفية الداكنة، نفس الزجاجية، ونفس ألوان JLT الذهبية مع تحسين بصري احترافي.</div>
+
+        <div class="grid">
+            <div class="card">
+                <h3><i class="fas fa-globe-asia"></i> مقارنة الأسعار الدولية (جملة)</h3>
+                <ul>
+                    <li>🌏 <strong>الصين (مصنع DASHUO)</strong> – لمبة 9W LED: ≈ 140 دج قبل الشحن والجمارك.</li>
+                    <li>🇹🇷 <strong>تركيا (وسيط)</strong> – لمبة 9W LED: ≈ 210 دج شامل الشحن والجمارك إلى الجزائر.</li>
+                    <li>🇶🇦 <strong>قطر (Philips 9W)</strong> – 5.95 ريال ≈ 220 دج سعر جملة مع مقارنة الجودة.</li>
+                    <li>🇨🇳 <strong>مصانع منخفضة الجودة</strong> – 90-110 دج وعمر أقل من 1000 ساعة.</li>
+                </ul>
+                <div class="note">📌 ملاحظة: أسعار الصين لا تشمل الشحن والجمارك والوقت. JLT تعتمد الاستيراد المباشر مع تصنيع محلي لتقليل الكلفة والوقت.</div>
+            </div>
+
+            <div class="card">
+                <h3><i class="fab fa-instagram"></i> أسعار السوق الجزائري (تجزئة 2025-2026)</h3>
+                <ul>
+                    <li>🔹 <strong>JLT 9W</strong> – <span style="color:#4caf50; font-weight:bold;">280 دج</span> مع ضمان سنتين وصنع جزائري.</li>
+                    <li>🔸 <strong>Philips 9W</strong> – 650 دج، أعلى بكثير مع ضمان 6 أشهر فقط.</li>
+                    <li>🔹 <strong>Generic</strong> – 200 دج، عمر قصير ولا ضمان فعلي.</li>
+                    <li>🔸 <strong>أبليك LED فاخر</strong> – 6800 دج، حسب منشورات السوق.</li>
+                    <li>🔹 <strong>شريط LED 5m</strong> – 990 دج، حسب منشورات محلية.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h3>💰 لماذا JLT أرخص بـ 20-30%؟</h3>
+            <div class="features">
+                <div class="feature"><i class="fas fa-ship"></i><div><strong>استيراد مباشر</strong><br>بدون وسيط تركي، ما يخفض الكلفة النهائية ويزيد التحكم.</div></div>
+                <div class="feature"><i class="fas fa-weight-hanging"></i><div><strong>هيكل PBT</strong><br>أخف من الألمنيوم، ويقلل كلفة الشحن والجمارك.</div></div>
+                <div class="feature"><i class="fas fa-bolt"></i><div><strong>Driver 165-265V</strong><br>تحمل واسع لتذبذب الجهد الجزائري وتقليل المرتجعات.</div></div>
+                <div class="feature"><i class="fas fa-box"></i><div><strong>تغليف موحد</strong><br>هوية بصرية واحدة وتكلفة طباعة وتخزين أقل.</div></div>
+                <div class="feature"><i class="fas fa-shield-alt"></i><div><strong>ضمان محفور</strong><br>ضمان سنتين على المنتج مع رقم دفعة وتاريخ إنتاج.</div></div>
+                <div class="feature"><i class="fas fa-leaf"></i><div><strong>استدامة أفضل</strong><br>تصميم اقتصادي، صيانة أسهل، وهدر أقل.</div></div>
+            </div>
+        </div>
+
+        <div class="section-box">
+            <h3>⚙️ الميزة التقنية الفريدة</h3>
+            <div class="features">
+                <div class="feature"><i class="fas fa-check-circle"></i><div><strong>165-265V مطبوع على العلبة</strong><br>ملائم لمناطق انخفاض الجهد في الجزائر.</div></div>
+                <div class="feature"><i class="fas fa-check-circle"></i><div><strong>ضمان محفور</strong><br>ليس ورقة قابلة للضياع، بل جزء من هوية المنتج.</div></div>
+                <div class="feature"><i class="fas fa-check-circle"></i><div><strong>QR للتحقق</strong><br>صفحة تحقق من الضمان وشهادة IP65/IP66.</div></div>
+                <div class="feature"><i class="fas fa-check-circle"></i><div><strong>حماية مزدوجة</strong><br>فيوز + زينر ديود لتقليل التلف عند التذبذب.</div></div>
+                <div class="feature"><i class="fas fa-check-circle"></i><div><strong>LM-80</strong><br>إشارة قوية لعمر افتراضي أعلى وثقة أكبر.</div></div>
+                <div class="feature"><i class="fas fa-check-circle"></i><div><strong>صنع في الجزائر</strong><br>دعم محلي وتقليل الاعتماد على الاستيراد النهائي.</div></div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <h3>📢 ملخص للزبون الجزائري</h3>
+            <div class="pills">
+                <div class="pill"><b>57%</b> أرخص من Philips</div>
+                <div class="pill"><b>2 سنة</b> ضمان محفور</div>
+                <div class="pill"><b>165-265V</b> تحمل جهد واسع</div>
+                <div class="pill"><b>صنع جزائري</b> هوية محلية</div>
+            </div>
+            <p style="margin-top:16px;">JLT تجمع بين السعر الذكي، الأمان الكهربائي، والهوية المحلية في عرض واحد متماسك وواضح.</p>
+        </div>
+
+        <div class="foot">بيانات الأسعار المذكورة تُستخدم كصياغة تسويقية/توضيحية داخل الصفحة، والأفضل ربط كل مرجع بصفحة تحقق أو QR خاص به.</div>
+    </div>
+</div>
+
+</body>
+</html>
