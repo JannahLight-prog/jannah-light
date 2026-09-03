@@ -7,14 +7,15 @@ icon: book
 
 ## الدليل التشغيلي المعياري
 
-**الإصدار:** V.9.4\
-**تاريخ الإصدار:** 23 مايو 2026\
+**الإصدار:** V9.4-3\
+**تاريخ آخر تحديث:** 03 سبتمبر 2026\
 **النطاق:** تشغيل ورشة جَنَّة لايت خلال السنة الأولى.
 
 هذا الدليل مرجع العمل اليومي للورشة. تُوثَّق كل عملية وإخفاق وقرار.
 
 ### ابدأ من القسم المناسب
 
+* [04-sjl-alisdarat-widarh-altghyyr.md](aldlyl-altshghyly-ljana-h-layt/04-sjl-alisdarat-widarh-altghyyr.md "mention") — ترقيم الإصدارات ومسار اعتماد التعديلات.
 * [altjhyzat-wbyeh-alaml.md](aldlyl-altshghyly-ljana-h-layt/altjhyzat-wbyeh-alaml.md "mention") — الآلات والطاقة والهواء وفحص بداية الوردية.
 * [ijraaat-alintaj-alywmyh.md](aldlyl-altshghyly-ljana-h-layt/ijraaat-alintaj-alywmyh.md "mention") — التسلسل التشغيلي من PCB حتى التغليف.
 * [aljwdh-walakhtbarat.md](aldlyl-altshghyly-ljana-h-layt/aljwdh-walakhtbarat.md "mention") — قبول المواد والاختبارات ومعايير الرفض.
