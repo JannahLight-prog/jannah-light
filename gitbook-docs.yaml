@@ -16,6 +16,7 @@ site:
           draft: true
           content:
             directory: ./untitled
+            language: fr
     - type: section
       key: section-2
       title: Product Docs
